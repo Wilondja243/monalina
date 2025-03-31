@@ -15,11 +15,14 @@
     --SOFT-SPEACH:#EEEEEE;
     --WHITE-SMOKE:#F5F5F8;
     --BLUE-COLOR:#004CD0;
-    --CINDER-COLOR:#0D111B;
+    --CINDER-COLOR:#0e1932;
     --BLUE-ZODIAC-COLOR:#162251;
     --DARK-RIVER:#061731;
     --DARK-PEARL:#04122B;
     --CHANTAS-BLUE-COLOR:#215075;
+
+    --width:85%;
+    --margin:0 auto;
 }
 
 
@@ -31,12 +34,13 @@ h1,h2,h3{
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
 }
-p,small{
+p, small, b{
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-optical-sizing: auto;
     color: #e7efff;
 }
+
 
 
 /*################# 
@@ -81,10 +85,10 @@ header nav .nav-bar{
     align-items: center;
     justify-content: space-between;
     column-gap: 10px;
-    width: 85%;
-    margin: 0 auto;
+    width: var(--width);
+    margin: var(--margin);
 }
-header nav .nav-bar .logo h1{
+.logo h1{
     color: transparent;
     background: url("../public/asserts/images/start/log.jpeg");
     background-clip: text;
@@ -200,7 +204,7 @@ section{
 /* choose style */
 
 .chooses{
-    width: 85%;
+    width: var(--width);
     margin:5em auto;
 }
 .chooses .choose-us{
@@ -318,8 +322,8 @@ small span{
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 25px;
-    width: 85%;
-    margin: auto;
+    width: var(--width);
+    margin: var(--margin);
     padding: 100px 0;
 }
 .projects .project-infos p{
@@ -379,8 +383,8 @@ small span{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    width: 85%;
-    margin: auto;
+    width: var(--width);
+    margin: var(--margin);
     padding: 70px 0;
 }
 .services .our-services h2{
@@ -426,9 +430,89 @@ small span{
    FOOTER STYLE
 #################*/
 
+footer{
+    background: var(--CINDER-COLOR);
+}
 
+.footer-container{
+    width: var(--width);
+    margin: var(--margin);
+    padding: 70px 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+}
+.footer-container .logo p{
+    padding: 10px 0;
+}
+.footer-container .logo .contacts{
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+.footer-container .logo .contacts i{
+    padding: 8px 10px;
+    margin-left: 10x;
+    color: var(--WHITE-COLOR);
+    background: var(--BLUE-COLOR);
+    border-radius: 50%;
+}
+.footer-container .logo .contacts i:hover{
+    color: #ff00c3;
+}
+.footer-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 10px;
+}
+.footer-content div ul{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.footer-content div ul a{
+    color: #e7efff;
+    font-weight: 500;
+}
+.footer-content div ul a:hover{
+    color: #ffffff;
+}
 
+.footer-content div:last-child p{
+    margin: 15px 0;
+}
+.footer-content form .input-email{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #e7efff;
+}
+.footer-content form .input-email input{
+    width: 100%;
+    padding: 10px 5px;
+    background: #e7efff;
+    border: none;
+}
+.footer-content form .input-email i{
+    padding: 8px 20px;
+    font-size: 20px;
+    color: var(--WHITE-COLOR);
+    background: var(--BLUE-COLOR);
+    cursor: pointer;
+}
+.footer-content form .input-email i:hover{
+    background:#0c65ff;
+}
 
+.copyright{
+    text-align: center;
+    color: #e7efff;
+    padding: 20px 0;
+    border-top: 1px solid #e7efff40;
+    margin: var(--margin);
+    width: var(--width);
+}
 
 /*################# 
    END FOOTER STYLE
