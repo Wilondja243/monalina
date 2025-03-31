@@ -14,6 +14,7 @@
     --WHITE-COLOR:#FFFFFF;
     --SOFT-SPEACH:#EEEEEE;
     --WHITE-SMOKE:#F5F5F8;
+    --BLUE-COLOR:#004CD0;
     --CINDER-COLOR:#0D111B;
     --BLUE-ZODIAC-COLOR:#162251;
     --DARK-RIVER:#061731;
@@ -23,7 +24,7 @@
 
 
 body{
-    background: var(--WHITE-COLOR);
+    background: var(--DARK-PEARL);
 }
 h1,h2,h3{
     color:#d7e6ff;
@@ -77,13 +78,27 @@ header nav{
 
 header nav .nav-bar{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     column-gap: 10px;
     width: 85%;
     margin: 0 auto;
 }
 header nav .nav-bar .logo h1{
-    color: #A4BED9;
+    color: transparent;
+    background: url("../public/asserts/images/start/log.jpeg");
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    
+    font-size: 40px; 
+    font-weight: bold;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    display: inline-block;
 }
 
 header nav ul{
@@ -91,11 +106,12 @@ header nav ul{
     column-gap: 25px;
 }
 header nav ul a{
-    color: var(--WHITE-COLOR);
+    color: #d7e6ff;
     font-weight: bold;
+    text-transform: uppercase;
 }
 header nav ul a:hover{
-    color: var(--CHANTAS-BLUE-COLOR);
+    color: var(--BLUE-COLOR);
 }
 
 /* hero style */
@@ -128,7 +144,7 @@ header nav ul a:hover{
     cursor: pointer;
 }
 .hero .title button:hover{
-    background:  #004cd0;
+    background:  var(--BLUE-COLOR);
 }
 
 .hero .short-services{
@@ -348,7 +364,7 @@ small span{
     transition: background 0.5s ease-in-out;
 }
 .projects .our-projects div i:hover{
-    background: #004cd0;
+    background: var(--BLUE-COLOR);
 }
 
 /* end project style */
