@@ -184,7 +184,7 @@ header nav ul a:hover{
     border: none;
 }
 
-.hero .short-services div:hover{
+.short-services div:hover{
     background: #0053b2;
     transform: scaleY(1.1);
     margin: 0 0;
@@ -288,6 +288,7 @@ small span{
 }
 .start-with div:nth-child(1){
     position: relative;
+    height: 400px;
 }
 .start-with div:nth-child(1) img{
     position: absolute;
