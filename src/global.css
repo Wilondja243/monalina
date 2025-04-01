@@ -283,12 +283,13 @@ small span{
 .chooses .start-with{
     display: grid;
     grid-template-columns: 0.8fr 1fr;
+    align-items: center;
     justify-content: space-between;
     gap: 5em;
 }
 .start-with div:nth-child(1){
     position: relative;
-    height: 400px;
+    height: 300px;
 }
 .start-with div:nth-child(1) img{
     position: absolute;
@@ -567,7 +568,6 @@ footer{
     }
     .start-with div:nth-child(1){
         width: 60%;
-        height: 300px;
         margin: auto;
     }
     .start-with div:nth-child(2){
