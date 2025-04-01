@@ -124,6 +124,16 @@ header nav ul a:hover{
     color: var(--BLUE-COLOR);
 }
 
+.responsive-bar{
+    display: none;
+    font-size: 25px;
+    color: var(--SOFT-SPEACH);
+    cursor: pointer;
+}
+.responsive-bar:hover{
+    color: #ff9ee2;
+}
+
 /* hero style */
 
 .hero{
@@ -559,7 +569,23 @@ footer{
 
 @media screen and (max-width:800px) {
     header nav ul{
-        display:none;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        row-gap: 15px;
+        background: #04122bbe;
+        padding: 15px 0;
+        position:absolute;
+        top: 5.4em;
+        left: 0;
+        z-index: 50;
+    }
+    header nav ul li{
+        border-bottom: 1px solid #e0e0e02f;
+        padding: 20px;
+    }
+    .responsive-bar{
+        display: block;
     }
 
     .chooses .start-with{
