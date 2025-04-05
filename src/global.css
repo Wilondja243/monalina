@@ -145,10 +145,12 @@ header nav ul a:hover{
 .hero .title{
     color: var(--WHITE-COLOR);
 }
-.hero .title h1{
+.hero .title .h1{
     font-size: clamp(30px, 10vw, 50px);
     text-transform: uppercase;
     color: #d7e6ff;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 .hero .title button{
     padding: 10px 5px;
@@ -178,7 +180,8 @@ header nav ul a:hover{
     border-radius: 3px;
     box-shadow: 0 10px 15px #01081333;
     position: relative;
-    bottom: -5em;
+    bottom: -4em;
+    transition: bottom 1s ease-in-out;
 }
 .hero .short-services div{
     flex-grow: 1;
@@ -202,6 +205,17 @@ header nav ul a:hover{
     border-radius: 5px;
     color: var(--WHITE-COLOR) !important;
 }
+
+/* animation style */
+
+.hero .title .h1.opacity{
+    opacity: 1;
+}
+.hero .short-services.bottom{
+    bottom: -5em;
+}
+
+/* end animation style */
 
 
 /*################# 
@@ -232,14 +246,15 @@ section{
     justify-content: center;
     text-align: center;
 }
-.chooses .choose-us div:last-child{
-    width: 30em;
+.chooses .choose-us .ex{
+    width: 20em;
     height: 2px;
     margin: 7em auto;
     background: #64676d4a;
     position: relative;
+    transition: width 0.5s ease-in-out;
 }
-.chooses .choose-us div:last-child small{
+.chooses .choose-us .ex small{
     width: 20px;
     height: 20px;
     border:1px solid #cbcfd696;
@@ -248,39 +263,32 @@ section{
     top: -9px;
     cursor: pointer;
 }
-.chooses .choose-us div:last-child 
-small:hover{
+.chooses .choose-us .ex small:hover{
     border: 1px solid #0f67ff;
     box-shadow:0 0 10px #0762ff;
 }
-.chooses .choose-us div:last-child 
-small:hover p{
+.chooses .choose-us .exsmall:hover p{
     color: #0762ff;
 }
-.chooses .choose-us div:last-child 
-small:hover span{
+.chooses .choose-us .ex small:hover span{
     background: #0762ff;
     box-shadow:0 0 10px #0762ff;
 }
-.chooses .choose-us div:last-child 
-small:nth-child(1){
+.chooses .choose-us .ex small:nth-child(1){
     left: -6px;
 }
-.chooses .choose-us div:last-child 
-small:nth-child(3){
+.chooses .choose-us .ex small:nth-child(3){
     right: -6px;
 }
 
-.chooses .choose-us div:last-child 
-small p{
+.chooses .choose-us .ex small p{
     border-radius: 50%;
     position: absolute;
     top: -3em; 
     left: -30px;
     font-size: 17px;
 }
-.chooses .choose-us div:last-child 
-small span{
+.chooses .choose-us .ex small span{
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -297,6 +305,8 @@ small span{
     align-items: center;
     justify-content: space-between;
     gap: 5em;
+    margin-top: 5em;
+    transition: margin-top 0.5s ease-in-out;
 }
 .start-with div:nth-child(1){
     position: relative;
@@ -331,6 +341,19 @@ small span{
 
 /* end choose style */
 
+
+/* animation style */
+
+.chooses .choose-us .ex.width{
+    width: 30em;
+}
+.chooses .start-with.mt{
+    margin-top: 0;
+}
+
+/* end animation style */
+
+
 /* project style */
 
 .projects-container{
@@ -345,6 +368,10 @@ small span{
     max-width: var(--max-width);
     margin: var(--margin);
     padding: 100px 0;
+}
+.projects .project-infos{
+    margin-top: -3em;
+    transition: margin 0.5s ease-in-out;
 }
 .projects .project-infos p{
     margin: 20px 0;
@@ -362,6 +389,14 @@ small span{
 .projects .our-projects div{
     flex-basis: 200;
     height: 300px;
+}
+.projects .our-projects .one{
+    margin-top: 3em;
+    transition: margin 0.5s ease-in-out;
+}
+.projects .our-projects .two{
+    margin-top: -3em;
+    transition: margin 0.5s ease-in-out;
 }
 .projects .our-projects div img{
     flex-basis: 200;
@@ -392,6 +427,21 @@ small span{
 
 /* end project style */
 
+
+/* animation style */
+
+.projects .project-infos.mt{
+    margin-top: 0;
+}
+.projects .our-projects .one.mt1{
+    margin-top: 0;
+}
+.projects .our-projects .two.mt2{
+    margin-top: 0;
+}
+
+/* end animation style */
+
 /* services style */
 
 .services{
@@ -407,7 +457,7 @@ small span{
     margin: var(--margin);
     padding: 70px 0;
 }
-.services .our-services h2{
+.services .our-services .text{
     color: var(--SOFT-SPEACH);
     align-self: center;
 }
