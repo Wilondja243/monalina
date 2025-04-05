@@ -1,7 +1,7 @@
 export class Event{
 
     constructor(selectors){
-        this.text = "Freign Company Width Difference Innovation."
+        this.text = `Unmatched services. Unmatched excellence.`
         this.index = 0;
         this.scroll = this.scrollEvent(selectors);
     }
