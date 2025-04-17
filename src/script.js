@@ -5,8 +5,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     
     const event = new Event(
         [
-            '.h1','.short-services','.ex','.start-with',
-            '.project-infos','.one','.two','.services'
+            '.h1','.short-services',
+            '.ex','.start-with',
+            '.project-infos','.one',
+            '.two','.services'
         ]
     );
 })

@@ -673,7 +673,7 @@ footer{
 }
 
 @media screen and (max-width:600px) {
-    .chooses .choose-us div:last-child{
+    .chooses .choose-us .ex.width{
         width: 85%;
         margin: 7em auto;
     }

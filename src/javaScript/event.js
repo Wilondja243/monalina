@@ -38,7 +38,7 @@ export class Event{
                     }
                 }
             });
-        },{threshold:'0.5'})
+        },{threshold:'0.3'})
 
         selectors.forEach(selector =>{
             const elements = document.querySelectorAll(selector);
