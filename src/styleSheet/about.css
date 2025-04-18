@@ -8,11 +8,45 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-family: "Roboto", sans-serif;
 }
+
+:root{
+    --white-color: #ffffff;
+    --smoke-color: #eeeeee;
+    
+    --blue-color-400: #0c39ff;
+    --blue-color-600: #0023be;
+    --blue-color-700: #00308a;
+    --blue-color-900: #050046;
+    --blue-color-950: #08071d;
+    --red-color:#db0049;
+
+    /* transparence */
+
+    --smoke-T918:#eeeeeeea;
+    --darkblue-T122:#08071b1f;
+    --darkblue-T643: #121216a4;
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+h1,h2,h3{
+    color: var(--blue-color-950);
+}
+
+
+/*######## HERO STYLE #########*/
   
 
 .about-hero {
-    background-color: #050046;
+    background-color: var(--blue-color-900);
     height: 20em;
 }
 .about-hero .hero {
@@ -22,30 +56,198 @@
 }
 .about-hero .hero h1 {
     font-size: 40px;
+    color: var(--white-color);
 }
   
 
 /*########## ABOUT SECTION ##########*/
 
 .about-content{
-    width: 80%;
-    margin: auto;
+    width: 85%;
+    margin: 5em auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1em;
+    grid-template-columns: 0.7fr 1fr;
+    column-gap: 7em;
 }
-.about-content .img{
+.about-content .images{
     position: relative;
-    
     height: 400px;
 }
-.about-content .img img:first-child{
-    width: 100%;
-    height: 100%;
+.about-content .images img:nth-child(1){
+    border-radius: 10px;
 }
-.about-content .img img:last-child{
+.about-content .images img:nth-child(2){
     position:absolute;
+    top: 45px;
+    right: -80px;
+    width: 180px;
+    height: 220px;
+    border: 3px solid var(--white-color);
+    border-radius: 10px;
 }
+.about-content .images div:nth-child(3){
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    border-radius: 5px;
+    padding: 8px 25px;
+    position: absolute;
+    left: -2.5em;bottom: 2em;
+    color: var(--white-color);
+    background: var(--blue-color-600);
+}
+.about-content .images div:nth-child(3) p{
+    color: #eeeeeeea;
+}
+
+/* offers style */
+
+.offers small:nth-child(1){
+    color: var(--darkblue-T643);
+    font-size: 20px;
+}
+.offers h1:nth-child(2){
+    font-size: 40px;
+    margin-top: 5px;
+}
+.offers p:nth-child(3){
+    margin: 15px 0;
+    color: var(--darkblue-T643);
+    line-height: 25px;
+}
+.offers .works div{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    line-height: 30px;
+}
+.offers .works div i{
+    font-size: 20px;
+    color: var(--blue-color-600);
+}
+.offers .admin-infos{
+    display: flex;
+    column-gap: 25px;
+    margin-top: 20px;
+}
+.offers .admin-infos .infos{
+    display: flex;
+    column-gap: 5px;
+}
+.offers .admin-infos .infos .image{
+    width: 50px;
+    height: 50px;
+}
+.offers .admin-infos .infos .image img{
+    border-radius: 50%;
+    border: 2px solid var(--blue-color-600);
+}
+.offers .admin-infos .infos .name h2{
+    font-size: 20px;
+}
+.offers .admin-infos .infos .name p{
+    color: var(--darkblue-T643);
+}
+.offers .admin-infos button{
+    border: none;
+    width: 10em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--white-color);
+    background: var(--blue-color-600);
+}
+
+/* end offers style */
+
+
+/* all offers style */
+
+.all-offers{
+    width: 85%;
+    margin: auto;
+}
+.all-offers .title{
+    text-align: center;
+}
+.all-offers .title small{
+    font-size: 15px;
+    color: var(--darkblue-T643);
+}
+.all-offers .title h2{
+    font-size: 30px;
+}
+.best-offers{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+    background: var(--white-color);
+}
+.best-offers .offers{
+    box-shadow: 0 5px 10px var(--darkblue-T122);
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+.best-offers .offers:hover{
+    transform: scale(1.05);
+}
+.best-offers .offers h2{
+    font-size: 20px;
+}
+.best-offers .offers .service{
+    padding: 20px;
+}
+.best-offers .offers .service p{
+    margin-top: 10px;
+    color: var(--darkblue-T643);
+}
+
+.best-offers .offers .explore{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 0 20px;
+}
+.best-offers .offers .explore div:nth-child(1){
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.best-offers .offers .explore button{
+    padding: 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: var(--white-color);
+    box-shadow: 0 7px 10px var(--darkblue-T122);
+    transition: background 0.3s ease-in-out;
+}
+.best-offers .offers:hover .explore button{
+    color: var(--white-color);
+    background: var(--blue-color-600);
+}
+.best-offers .offers:hover .explore button:hover{
+    background: var(--blue-color-400);
+}
+
+.best-offers .offers .explore div:nth-child(2){
+    background: var(--blue-color-600    );
+    width: 150px;
+    height: 130px;
+    border-top-left-radius: 90%;
+    position: relative;
+}
+.best-offers .offers .explore svg{
+    position: absolute;
+    top: 40px;
+    left: 2.8em;
+}
+
+
+
+/* end all offers style */
 
 /*########## END ABOUT SECTION ##########*/
  
