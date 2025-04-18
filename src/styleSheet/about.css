@@ -24,8 +24,10 @@
 
     /* transparence */
 
-    --smoke-T918:#eeeeeeea;
+    --smoke-T918:#eeeeeef5;
+    --smoke-T341:#f0f0f06b;
     --darkblue-T122:#08071b1f;
+    --darkblue-T055:#08071b0e;
     --darkblue-T643: #121216a4;
 }
 
@@ -60,7 +62,7 @@ h1,h2,h3{
 }
   
 
-/*########## ABOUT SECTION ##########*/
+/*########## ABOUT MAIN STYLE ##########*/
 
 .about-content{
     width: 85%;
@@ -236,7 +238,7 @@ h1,h2,h3{
     background: var(--blue-color-600    );
     width: 150px;
     height: 130px;
-    border-top-left-radius: 90%;
+    border-top-left-radius: 95%;
     position: relative;
 }
 .best-offers .offers .explore svg{
@@ -245,11 +247,140 @@ h1,h2,h3{
     left: 2.8em;
 }
 
-
+.all-offers .expert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px 0;
+}
+.all-offers .expert p{
+    padding: 15px 20px;
+    border-radius: 5px;
+    background: var(--smoke-T341);
+    color: var(--darkblue-T643);
+}
+.all-offers .expert p b{
+    color: var(--blue-color-950);
+}
+.all-offers .expert button{
+    border: none;
+    width: 10em;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--white-color);
+    background: var(--blue-color-600);
+}
+.all-offers .expert button:hover{
+    background: var(--blue-color-700);
+}
 
 /* end all offers style */
 
-/*########## END ABOUT SECTION ##########*/
+
+/* Team member style */
+
+.team{
+    background: var(--smoke-T341);
+}
+
+.team .team-members{
+    width: 85%;
+    margin: auto;
+    padding: 5em 0;
+}
+.team-members .title{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+.team-members .title button{
+    width: 130px;
+    margin: auto;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 5px 10px var(--darkblue-T055);
+    background: var(--white-color);
+}
+.team-members .title h1{
+    font-size: clamp(30px, 30vw, 40px);
+}
+.team-members .title h1 strong{
+    color: var(--red-color);
+}
+.team-members .title p{
+    color: var(--darkblue-T643);
+}
+
+
+.members{
+    display: grid;
+    grid-template-columns: 320px;
+    justify-content: center;
+    margin-top: 40px;
+}
+.members .member{
+    background: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 5px var(--darkblue-T055);
+}
+.members .member img{
+    height: 60%;
+    border-radius: 10px 10px 0 0;
+}
+.members .member .identity{
+    padding: 80px 10px 10px 10px;
+    position: relative;
+}
+.members .member .identity div:nth-child(1){
+    background: var(--blue-color-700);
+    color: var(--white-color);
+    padding: 8px 12px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;
+    top: -3em;
+    left: 3.5em;
+}
+.members .member .identity div:nth-child(1) h2{
+    color: var(--white-color);
+}
+
+.members .member .identity .media{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    padding-bottom: 20px;
+}
+.members .member .identity .media i{
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--smoke-T918);
+    transition: background 0.2s ease-in-out;
+}
+.members .member .identity .media i:hover{
+    padding: 11px;
+    color: var(--white-color);
+    background: var(--blue-color-600);
+    border: none;
+}
+
+
+
+/* End Team member style */
+
+
+
+/*########## END ABOUT MAIN STYLE ##########*/
  
   
   
