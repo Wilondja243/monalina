@@ -3,37 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Effet Lumière Diffuse</title>
+  <title>Flottement</title>
   <style>
-   .container{
-    display: grid;
-   
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: auto 1fr auto;
-   }
+    body {
+      background: #aee6f9; /* eau claire */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-   aside{
+    .bottle {
+      width: 60px;
+      height: 100px;
+      background: #6c4f3d; /* couleur bouteille */
+      border-radius: 20px 20px 10px 10px;
+      animation: float 3s ease-in-out infinite;
+    }
 
-    background: red;
-    content: "aside";
-    height: 100px;
-   }
-   .main-content{
-    
-    background: blue;
-    height: 100px;
-   }
- 
+    @keyframes float {
+      0%   { 
+        transform: translateY(0px) rotate(-1deg);
+      }
+      50%  { transform: translateY(-10px) rotate(5deg); }
+      100% { transform: translateY(0px) rotate(-1deg); }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <aside></aside>
-    <div class="main-content">
-      <div class="top-bar"></div>
-      <div class="section"></div>
-    </div>
-  </div>
+  <div class="bottle"></div>
 </body>
 </html>
-

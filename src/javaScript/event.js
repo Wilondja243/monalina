@@ -16,8 +16,12 @@ export class Event{
             entries.forEach(entry => {
                 const element = entry.target;
                 if(entry.isIntersecting){
-                    if(element.classList.contains('h1')){
-                        element.classList.add('opacity');
+                    if(element.classList.contains('h1') || 
+                       element.classList.contains('git') ||
+                       element.classList.contains('world') ||
+                       element.classList.contains('glass')){
+
+                        this.animeElement(element, ['opacity', 'top1', 'top2', 'top3'])
                     }
                     else if(element.classList.contains('short-services')){
                         element.classList.add('bottom');
@@ -31,7 +35,7 @@ export class Event{
                     else if(element.classList.contains('project-infos') ||
                             element.classList.contains('one') ||
                             element.classList.contains('two')){
-                        this.prAnime(element, ['mt', 'mt1', 'mt2']);
+                        this.animeElement(element, ['mt', 'mt1', 'mt2']);
                     }
                     else if(element.classList.contains('services')){
                         this.wrLetter()
@@ -51,7 +55,7 @@ export class Event{
 
     // project animation
 
-    prAnime(element, elementSelectors){
+    animeElement(element, elementSelectors){
         elementSelectors.forEach(elementSelector =>{
             element.classList.add(elementSelector);
         })
